@@ -6,7 +6,20 @@ Simple CI tool for building and testing projects in different environments. Loca
 
 ## Installation
 
-To install `local-ci` there is needed to copy binary file from Releases page  https://github.com/ownport/local-ci/releases
+No installation is required. Just needed to copy binary file `local-ci` from Releases page  https://github.com/ownport/local-ci/releases to your computer and run from command line:
+
+```sh
+$ ./bin/local-ci --help
+Usage: local-ci [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -r REPO_PATH, --repo-path=REPO_PATH
+                        the path to source repository
+  -s SETTINGS, --settings=SETTINGS
+                        the path to local-ci configuration file (.local-
+                        ci.yml)
+```
 
 ## How to use
 
