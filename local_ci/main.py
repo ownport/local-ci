@@ -25,4 +25,8 @@ def run():
     repo_dispatcher = get_repo_dispatcher(opts.repo_path, get_settings(opts.settings))
 
     for image in repo_dispatcher.docker_images():
-        repo_dispatcher.run(image)
+        if not image:
+            print >> sys.stderr, "[WARNING] Unknown image, %s" % image
+        else:
+            print >> sys.stderr, "[INFO] The image, %s" % image
+            repo_dispatcher.run(image)
