@@ -4,6 +4,11 @@
 
 Simple CI tool for building and testing projects in different environments. Local-CI is used the approach with docker containers to create new environment, install required for the project dependencies and run tests.
 
+## Installation
+
+To install `local-ci` there is needed to copy binary file from Releases page  https://github.com/ownport/local-ci/releases
+
+## How to use
 
 At the moment local-ci supports [Travis-CI](https://travis-ci.org/) configuration
 [YAML file](https://docs.travis-ci.com/user/customizing-the-build/) for building and testing projects in different environments
