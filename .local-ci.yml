@@ -6,3 +6,8 @@ env:
 docker-images:
   python:2.7: ownport/python-dev:2.7
   python:3.5: ownport/python-dev:3.5
+
+docker-opts:
+  name: local-ci
+  hostname: local-ci
+  # net: docker-network
