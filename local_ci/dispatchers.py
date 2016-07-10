@@ -30,7 +30,7 @@ class BaseDispatcher(object):
         local_ci_run_path = utils.renew_local_ci_path(self.repo_path)
         utils.create_run_script(local_ci_run_path, self.script())
 
-        run_docker_containter(image, self.repo_path)
+        run_docker_containter(image, self.repo_path, self.settings.get('docker-opts', {}))
 
 
     def docker_images(self):
