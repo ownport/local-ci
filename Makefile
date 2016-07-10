@@ -15,7 +15,7 @@ clean:
 	@ rm -rf $(shell pwd)/.coverage
 
 
-$(PROJECT_NAME_BIN): clean
+compile: clean
 	@ echo "[INFO] Compiling to binary, $(PROJECT_NAME_BIN)"
 	@ mkdir -p $(shell pwd)/bin
 	@ cd $(shell pwd)/$(PROJECT_NAME_SRC)/; zip --quiet -r ../bin/$(PROJECT_NAME_BIN) *
@@ -31,5 +31,5 @@ test-all: clean
 test-all-with-coverage: clean
 		@ py.test --cov=local_ci --cov-report term-missing --cov-config=.coveragerc
 
-run-local-ci: clean $(PROJECT_NAME_BIN)
+run-local-ci: clean compile
 	@ ./bin/local-ci -r $(shell pwd) -s .local-ci.yml
