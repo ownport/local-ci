@@ -8,6 +8,7 @@ import unicodedata
 import travis
 
 from packages import yaml
+from errors import NoConfigFileFound
 from errors import IncorrectFileFormat
 
 
@@ -17,6 +18,8 @@ def get_repo_dispatcher(repo_path, settings):
     for config in os.listdir(repo_path):
         if config == '.travis.yml':
             return travis.TravisRepoDispatcher(repo_path, settings)
+    raise NoConfigFileFound()
+
 
 def get_settings(path):
     ''' retunrs settings from file
