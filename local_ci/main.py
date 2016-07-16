@@ -7,9 +7,11 @@ import optparse
 from utils import get_settings
 from utils import get_repo_dispatcher
 
+
 def run():
 
-    parser = optparse.OptionParser()
+    from __init__ import __version__
+    parser = optparse.OptionParser(version=__version__)
     parser.add_option('-r', '--repo-path', help="the path to source repository")
     parser.add_option('-s', '--settings', help="the path to local-ci configuration file (.local-ci.yml)")
     opts, args = parser.parse_args()
