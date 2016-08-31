@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/ownport/local-ci.svg?branch=master)](https://travis-ci.org/ownport/local-ci)
 
+NOTE: The local-ci project is pure *experimental project*, for production use please check [drone-ci](https://github.com/drone/drone) project
+
+
 Simple CI tool for building and testing projects in different environments. Local-CI is used the approach with docker containers to create new environment, install required for the project dependencies and run tests.
 
 ## Installation
